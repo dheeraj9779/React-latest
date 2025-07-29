@@ -9,7 +9,9 @@ function App() {
   return (
     <>
     <Header/>
-    <Outlet/>
+    <div className='flex justify-center'>
+      <Outlet/>
+    </div>
     </>
   )
 }

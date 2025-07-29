@@ -15,10 +15,12 @@ import { GetGitHubData } from './components/github/Github.jsx'
 import { Detail } from './components/detail/MyDetail.jsx'
 import { Signup } from './components/signup/Signup.jsx'
 import { Login } from './components/login/Login.jsx'
+import { Currency } from './components/currency/Currency.jsx'
 
 
 const Github = lazy(() => import('./components/github/Github.jsx'))
 function ErrorFallback({ error }) {
+  console.log("Error -->>>>>>>>>",error)
   return <div role="alert">Oops!! Something went wrong</div>;
 }
 
@@ -65,7 +67,18 @@ let router = createBrowserRouter([
       },
       {
         path: 'todo',
-        element: <PrivateRoute><Todo/></PrivateRoute>,
+        element: 
+          <PrivateRoute>
+            <Todo/>
+          </PrivateRoute>,
+      },
+      {
+        path: 'currency',
+        errorElement: <ErrorFallback />,
+        element: 
+          <PrivateRoute>
+            <Currency/>
+          </PrivateRoute>,
       }
     ]
   },
