@@ -14,3 +14,12 @@
   -moz-osx-font-smoothing: grayscale;
 } */
 
+.light{
+  background: rgb(224, 199, 241);
+  color: teal;
+}
+
+.dark{
+  color: pink !important;
+  background: black;
+}

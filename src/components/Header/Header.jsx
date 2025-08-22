@@ -1,11 +1,13 @@
 import { Link, NavLink } from "react-router"
+import { useTheme } from "../../hooks/useTheme"
+
 
 export const Header = () => {
+  const {theme,toggleTheme} = useTheme()
     return(
         <>
-            <nav>
-              <ul className="flex gap-2 text-base font-medium bg-cyan-400 mb-4">
-
+            <nav className={`flex justify-between px-2 items-center ${theme}`}>
+              <ul className="flex gap-2 text-base font-medium  mb-0" >
                 <li className="p-3">
                   <NavLink to="/" className={({isActive}) => isActive? "text-red-700": "text-green-800"}>
                     Home
@@ -69,6 +71,9 @@ export const Header = () => {
                 </li>
                 
               </ul>
+                <div onClick={toggleTheme} className="capitalize font-bold cursor-pointer">
+                  {theme === 'light' ? 'dark' : 'light'}
+                </div>
             </nav>
         </>
     )

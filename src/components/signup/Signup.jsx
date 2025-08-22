@@ -146,8 +146,10 @@ export const Signup = () => {
                             </label>
                         </div>
                 
+                <div className="w-full text-center my-3">
+
                 
-                <button className="w-full bg-green-900 text-white px-4 py-3 rounded-lg text-center cursor-pointer" type="submit">Signup</button>
+                <button className="w-1/2 mx-auto text-center bg-green-900 text-white px-4 py-3 rounded-3xl text-center cursor-pointer" type="submit">Signup</button></div>
             </form>
             </div>
             
